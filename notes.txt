@@ -31,57 +31,10 @@ Css - Cascading Styling Sheet
 
 types - inline, intenal, external css 
 
-Software Industry - Softwares 
-
-Softwares - set of istructions is called software 
-
-Desktop Softwares
-
-Mobile softwares
-
-Gaming Softwares
-
-Web Softwares 
-
-Industry Softwares 
-
-Today - cloud
 
 
-Web Application 
-
-Banking Domain
-
-Educational Domain
-
-Medical Domain
-
-Logistics Domain
-
-Ecommerce Domain
-
-Booking Domain 
 
 
-Testing :- Manual and Automation 
-
-Manual - Without usinf automation tool and framework if we test any software that type of testing called manual testing
-
-Automation - with using automation tools and frameworks if we test any softwres that type testing is called autmation
-
-Java 
-
-Seleium
-
-Cucumber 
-
-TestNG 
-
-Jira 
-
-Jenkins
-
-Git and github
 
 
 
