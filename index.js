@@ -1123,42 +1123,42 @@
 // take out the trash
 // go to office
 
-function walkDog() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const dogWalked = true;
-      if (dogWalked) {
-        resolve("You walked the dog");
-      } else {
-        reject("You didnt wlak the dog");
-      }
-    }, 2000);
-  });
-}
-function cleanKitchen() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const kitchenCleaned = false;
-      if (kitchenCleaned) {
-        resolve("You cleaned the kitchen");
-      } else {
-        reject("you didnt clean the kitchen");
-      }
-    }, 3000);
-  });
-}
-function takeOutTrash() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const trashTakenOut = true;
-      if (trashTakenOut) {
-        resolve("You taked out the trash");
-      } else {
-        reject("you didnt take out the tarsh");
-      }
-    }, 1000);
-  });
-}
+// function walkDog() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const dogWalked = false;
+//       if (dogWalked) {
+//         resolve("You walked the dog");
+//       } else {
+//         reject("You didnt wlak the dog");
+//       }
+//     }, 2000);
+//   });
+// }
+// function cleanKitchen() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const kitchenCleaned = true;
+//       if (kitchenCleaned) {
+//         resolve("You cleaned the kitchen");
+//       } else {
+//         reject("you didnt clean the kitchen");
+//       }
+//     }, 3000);
+//   });
+// }
+// function takeOutTrash() {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       const trashTakenOut = true;
+//       if (trashTakenOut) {
+//         resolve("You taked out the trash");
+//       } else {
+//         reject("you didnt take out the tarsh");
+//       }
+//     }, 1000);
+//   });
+// }
 
 // walkDog(() => {
 //   cleanKitchen(() => {
@@ -1183,21 +1183,91 @@ function takeOutTrash() {
 //   })
 //   .catch((error) => {console.error(error)});
 
+// walkDog()
+// .then((value) => {
+//   console.log(value);
+//   return cleanKitchen();
+// })
+// .then((value) => {
+//   console.log(value);
+//   return takeOutTrash();
+// })
+// .then((value) => {
+//   console.log(value);
+//   console.log("you finished all work");
+// })
+// .catch((error) => {
+//   console.log("ERROR:", error);
+// });
 
+// async/await -
 
-  walkDog()
-  .then((value) => {
-    console.log(value);
-    return cleanKitchen();
-  })
-  .then((value) => {
-    console.log(value);
-    return takeOutTrash();
-  })
-  .then((value) => {
-    console.log(value);
-    console.log("you finished all work");
-  })
-  .catch((error) => {
-    console.log("ERROR:", error);
-  });
+// async - make a function return a promise
+
+// await - make an async functionwait for a promise
+
+// allow us to wite asyshrous code in synshrouns mannner
+// async does not have resolve or reject parameters
+// everything after await is placed in event queue
+
+// async function doTasks() {
+//   try {
+//     const walkDogResult = await walkDog();
+//     console.log(walkDogResult);
+//     const cleanKitchenResult = await cleanKitchen();
+//     console.log(cleanKitchenResult);
+//     const takeOutTrashResult = await takeOutTrash();
+//     console.log(takeOutTrashResult);
+
+//     console.log("You hava finsihed all the tasks");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// doTasks();
+
+// JSON - (Javascript object notation) data interchaning format
+
+// used for exchange data between a server and web app
+
+// json files (key:value) or [value1, value2, value3]
+
+// json.stringify() - convert js object to json string
+// json.parse() - converts json string to a js object.
+
+// const name = ["ganesh", "sandy", "aslam"];
+
+// const person = `{
+//     "name": "aslam",
+//     "age": 29,
+//     "isEmployed": true,
+//   "hobbies": ["reading", "cooking", "swiming"]
+// };
+
+const jsonPeople = `[{
+    name: "aslam",
+    age: 29,
+    isEmployed: true,
+  },
+  {
+    name: "ani",
+    age: 22,
+    isEmployed: false,
+  },
+  {
+    name: "john",
+    age: 21,
+    isEmployed: false,
+  },
+  {
+    name: "kavin",
+    age: 23,
+    isEmployed: false,
+  }]`;
+
+// const jsonString = JSON.stringify(people);
+
+const parseData = JSON.parse(jsonPeople);
+
+console.log(parseData);
